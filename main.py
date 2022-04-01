@@ -52,7 +52,7 @@ while True:
         desencriptado = swap_letters(message)
         messagebox.showinfo('Mensaje desencriptado: ', desencriptado)
     else:
-        messagebox.showerror('Error', '[-] Datos no válidos')
+        messagebox.showerror('Error', '[-] Cerrando...')
         sys.exit(1)
         break
 
