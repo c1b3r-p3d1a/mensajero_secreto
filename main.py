@@ -1,5 +1,34 @@
 from tkinter import messagebox, simpledialog, Tk
 import sys
+import time
+
+def mecanografiar_texto(texto_a_mecanografiar):
+    texto_a_mecanografiar_convertido_a_lista = texto_a_mecanografiar.split()
+    for palabra in texto_a_mecanografiar_convertido_a_lista:
+        print(palabra, end="")
+        time.sleep(.2)
+
+
+
+def _header_():
+	print ('\033[1;31m')
+	print (r"""
+    cccc   i   bbbb    eeeeee   rrrrrrr
+   cc      i   b   b   eeeeee   rr   rrr
+   cc      i   b b     eee      rrrrrrr     ------   P3d1A
+   cc      i   b   b   eeeeee   rr rrrr
+    cccc   i   bbbb    eeeeee   rr  rrr                                                                    """)
+
+print ('\033[0m')
+
+_header_()
+
+print("")
+print ('\033[1;31m')
+mecanografiar_texto("[+] A b r i e n d o . . .")
+print ('\033[0m')
+
+time.sleep(1)
 
 def is_even(number):
     return number % 2 == 0
@@ -52,7 +81,10 @@ while True:
         desencriptado = swap_letters(message)
         messagebox.showinfo('Mensaje desencriptado: ', desencriptado)
     else:
-        messagebox.showerror('Error', '[-] Cerrando...')
+        print('\033[1;31m')
+        print (r"""[-] Cerrando...""")
+        print('\033[0m')
+        time.sleep(1)
         sys.exit(1)
         break
 
